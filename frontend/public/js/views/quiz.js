@@ -14,16 +14,46 @@ import {
 } from "../ui.js";
 
 const QUIZ_KEY = "english.quizSettings";
+const QUIZ_STATS_KEY = "english.quizSessionStats";
+
+const SETTINGS_FIELDS = ["scope", "only_unlearned", "category_id"];
 
 function loadSettings() {
   try {
-    return JSON.parse(localStorage.getItem(QUIZ_KEY)) || {};
+    const raw = JSON.parse(localStorage.getItem(QUIZ_KEY)) || {};
+    const out = {};
+    for (const k of SETTINGS_FIELDS) if (k in raw) out[k] = raw[k];
+    return out;
   } catch {
     return {};
   }
 }
 function saveSettings(s) {
-  localStorage.setItem(QUIZ_KEY, JSON.stringify(s));
+  const payload = {};
+  for (const k of SETTINGS_FIELDS) payload[k] = s[k];
+  localStorage.setItem(QUIZ_KEY, JSON.stringify(payload));
+}
+
+function loadStats() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(QUIZ_STATS_KEY));
+    if (raw && typeof raw === "object") {
+      return {
+        correct: Number(raw.correct) || 0,
+        incorrect: Number(raw.incorrect) || 0,
+        streak: Number(raw.streak) || 0,
+      };
+    }
+  } catch {
+    /* ignore */
+  }
+  return { correct: 0, incorrect: 0, streak: 0 };
+}
+function saveStats(s) {
+  localStorage.setItem(
+    QUIZ_STATS_KEY,
+    JSON.stringify({ correct: s.correct, incorrect: s.incorrect, streak: s.streak }),
+  );
 }
 
 export async function renderQuiz(root) {
@@ -32,11 +62,11 @@ export async function renderQuiz(root) {
     only_unlearned: true,
     category_id: null,
     categories: [],
-    session: { correct: 0, incorrect: 0, streak: 0 },
     current: null,
     answered: false,
     loading: false,
     ...loadSettings(),
+    session: loadStats(),
   };
 
   root.innerHTML = "";
@@ -72,6 +102,20 @@ export async function renderQuiz(root) {
       h("span", { class: "text-emerald-600 font-semibold" }, `✓ ${state.session.correct}`),
       h("span", { class: "text-rose-600 font-semibold" }, `✗ ${state.session.incorrect}`),
       h("span", { class: "text-slate-400" }, `🔥 ${state.session.streak}`),
+      h(
+        "button",
+        {
+          class: "text-slate-500 hover:text-slate-200 text-[13px] leading-none px-1",
+          title: "Сбросить счётчик",
+          "aria-label": "Сбросить счётчик",
+          onclick: () => {
+            state.session = { correct: 0, incorrect: 0, streak: 0 };
+            saveStats(state.session);
+            renderCounters();
+          },
+        },
+        "↺",
+      ),
     );
   };
 
@@ -111,6 +155,15 @@ export async function renderQuiz(root) {
           },
         }),
         h("span", { class: "text-slate-300" }, "Только «Изучаем»"),
+        h(
+          "span",
+          {
+            class: "text-slate-500 text-[11px]",
+            title:
+              "Если выключено — иногда подмешиваются уже изученные слова для повторения",
+          },
+          "ⓘ",
+        ),
       ],
     );
     optionsRow.append(toggleUnl);
@@ -292,6 +345,7 @@ export async function renderQuiz(root) {
         state.session.incorrect += 1;
         state.session.streak = 0;
       }
+      saveStats(state.session);
       renderCounters();
 
       setTimeout(() => {
@@ -403,15 +457,26 @@ export async function renderQuiz(root) {
 }
 
 function openCategorySheet(state, onPick, rerenderHeader) {
-  let showAll = false;
+  // При режиме повторения (only_unlearned=false) изначально показываем все,
+  // включая полностью изученные категории — чтобы можно было повторять.
+  let showAll = !state.only_unlearned;
 
   const container = h("div", { class: "space-y-3" });
   const grid = h("div", { class: "grid grid-cols-2 gap-2" });
+
+  // Доступна ли категория для выбора: если only_unlearned — нужен хотя бы один «изучаемый» пул,
+  // иначе (режим повторения) достаточно изученных слов.
+  const isPickable = (c) => {
+    const ready = c.quiz_ready_count || 0;
+    const learned = c.learned_count || 0;
+    return state.only_unlearned ? ready > 0 : ready > 0 || learned > 0;
+  };
+
   const rebuild = () => {
     grid.innerHTML = "";
     const filtered = showAll
       ? state.categories
-      : state.categories.filter((c) => (c.quiz_ready_count || 0) > 0);
+      : state.categories.filter(isPickable);
     const items = sortCategoriesWithPinned(filtered);
     if (!items.length) {
       grid.append(
@@ -426,6 +491,13 @@ function openCategorySheet(state, onPick, rerenderHeader) {
     for (const c of items) {
       const active = state.category_id === c.id;
       const ready = c.quiz_ready_count || 0;
+      const learned = c.learned_count || 0;
+      const pickable = isPickable(c);
+      const subtitle = state.only_unlearned
+        ? `Изучаем: ${ready} · Изучено: ${learned}/${c.words_count}`
+        : ready > 0
+          ? `Изучаем: ${ready} · Повторять: ${learned}`
+          : `Повторять: ${learned}/${c.words_count}`;
       const card = h(
         "button",
         {
@@ -433,9 +505,9 @@ function openCategorySheet(state, onPick, rerenderHeader) {
             active
               ? "bg-brand-600 text-white border-brand-500"
               : "bg-slate-800/50 border-slate-700/50 hover:border-brand-500"
-          } ${ready === 0 ? "opacity-60" : ""} ${c.is_pinned ? "is-pinned-card" : ""}`,
+          } ${pickable ? "" : "opacity-60"} ${c.is_pinned ? "is-pinned-card" : ""}`,
           onclick: () => {
-            if (ready === 0) {
+            if (!pickable) {
               toast("В этой категории нет доступных слов для квиза", "info");
               return;
             }
@@ -455,7 +527,7 @@ function openCategorySheet(state, onPick, rerenderHeader) {
             {
               class: `text-[11px] mt-0.5 ${active ? "text-white/80" : "text-slate-400"}`,
             },
-            `Изучаем: ${ready} · Изучено: ${c.learned_count}/${c.words_count}`,
+            subtitle,
           ),
         ],
       );
@@ -466,23 +538,36 @@ function openCategorySheet(state, onPick, rerenderHeader) {
   };
   rebuild();
 
-  const toggle = h(
-    "label",
-    { class: "flex items-center gap-2 text-sm text-slate-400 cursor-pointer select-none" },
-    [
-      h("input", {
-        type: "checkbox",
-        class: "accent-brand-500 w-4 h-4",
-        onchange: (e) => {
-          showAll = e.target.checked;
-          rebuild();
-        },
-      }),
-      h("span", {}, "Показывать все категории"),
-    ],
-  );
+  container.append(grid);
 
-  container.append(grid, toggle);
+  const showAllCheckbox = h("input", {
+    type: "checkbox",
+    class: "accent-brand-500 w-4 h-4",
+    checked: showAll ? "checked" : undefined,
+    onchange: (e) => {
+      showAll = e.target.checked;
+      rebuild();
+    },
+  });
 
-  const { close } = sheet(container, { title: "Выберите категорию" });
+  const footer = h("div", { class: "flex items-center gap-3" }, [
+    h(
+      "label",
+      {
+        class:
+          "flex items-center gap-2 text-sm text-slate-400 cursor-pointer select-none flex-1",
+      },
+      [showAllCheckbox, h("span", {}, "Показывать все категории")],
+    ),
+    h(
+      "button",
+      {
+        class: "btn-primary px-4",
+        onclick: () => close(),
+      },
+      "Готово",
+    ),
+  ]);
+
+  const { close } = sheet(container, { title: "Выберите категорию", footer });
 }

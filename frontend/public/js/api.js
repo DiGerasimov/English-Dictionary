@@ -79,6 +79,7 @@ export const api = {
   updateSettings: (payload) =>
     request("/auth/me/settings", { method: "PATCH", body: payload }),
   resetProgress: () => request("/auth/me/reset-progress", { method: "POST" }),
+  refillWords: () => request("/auth/me/refill-words", { method: "POST" }),
 
   categories: () => request("/categories"),
   pinCategory: (id) => request(`/categories/${id}/pin`, { method: "POST" }),

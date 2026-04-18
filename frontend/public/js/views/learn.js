@@ -1065,7 +1065,7 @@ function buildWordDetail(word) {
       statusBadge(p),
     ]),
     h("div", {}, [
-      h("h2", {}, [wordWithAudio(word, { size: "md", allowBlur: false })]),
+      h("h2", {}, [wordWithAudio(word, { size: "md", allowBlur: false, withAudio: false })]),
       word.transcription_ipa ? transcriptionLabel(word.transcription_ipa, { type: "ipa", allowBlur: false }) : null,
       word.transcription_ru ? transcriptionLabel(word.transcription_ru, { type: "ru", allowBlur: false }) : null,
     ]),

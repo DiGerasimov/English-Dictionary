@@ -9,6 +9,7 @@ from app.core.security import create_access_token, hash_password, verify_passwor
 from app.models import QuizAttempt, UserWordFormProgress, UserWordProgress
 from app.models.user import User
 from app.schemas.auth import LoginIn, RegisterIn, TokenOut, UserOut, UserSettingsIn
+from app.services.activation_service import ensure_active_words
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
@@ -69,6 +70,19 @@ async def update_settings(
     await db.commit()
     await db.refresh(current)
     return UserOut.model_validate(current)
+
+
+@router.post("/me/refill-words")
+async def refill_words(
+    current: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict[str, int]:
+    """Принудительно открывает новые слова по всем категориям, игнорируя дневной лимит.
+
+    Ведёт себя как наступление нового дня: заполняет активные слоты в каждой категории.
+    """
+    activated = await ensure_active_words(db, current, force_daily=True)
+    return {"activated": activated}
 
 
 @router.post("/me/reset-progress")

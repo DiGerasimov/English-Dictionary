@@ -63,6 +63,20 @@ async def overview(
     ).where(QuizAttempt.user_id == user.id, func.date(QuizAttempt.created_at) == today)
     correct_today, incorrect_today = (await db.execute(today_counts_stmt)).one()
 
+    correct_words_stmt = select(func.count(func.distinct(QuizAttempt.word_id))).where(
+        QuizAttempt.user_id == user.id,
+        QuizAttempt.is_correct.is_(True),
+        func.date(QuizAttempt.created_at) == today,
+    )
+    correct_today_words = (await db.execute(correct_words_stmt)).scalar_one() or 0
+
+    incorrect_words_stmt = select(func.count(func.distinct(QuizAttempt.word_id))).where(
+        QuizAttempt.user_id == user.id,
+        QuizAttempt.is_correct.is_(False),
+        func.date(QuizAttempt.created_at) == today,
+    )
+    incorrect_today_words = (await db.execute(incorrect_words_stmt)).scalar_one() or 0
+
     total_counts_stmt = select(
         func.sum(case((QuizAttempt.is_correct.is_(True), 1), else_=0)),
         func.count(QuizAttempt.id),
@@ -79,6 +93,8 @@ async def overview(
         seen_total=int(seen_total),
         correct_today=int(correct_today or 0),
         incorrect_today=int(incorrect_today or 0),
+        correct_today_words=int(correct_today_words),
+        incorrect_today_words=int(incorrect_today_words),
         accuracy_total=round(accuracy_total, 4),
         streak_days=streak,
     )

@@ -10,6 +10,8 @@ class OverviewOut(BaseModel):
     seen_total: int
     correct_today: int
     incorrect_today: int
+    correct_today_words: int
+    incorrect_today_words: int
     accuracy_total: float
     streak_days: int
 

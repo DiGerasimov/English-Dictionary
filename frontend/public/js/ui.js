@@ -159,7 +159,10 @@ let autoPlayTimeout = null;
  * При voice_mode=true у пользователя текст слова под блюром до первого клика или до клика по слову.
  * size: "lg" — крупный заголовок (карточка/квиз), "md" — средний (детали).
  */
-export function wordWithAudio(word, { size = "lg", allowBlur = true, autoPlay = true } = {}) {
+export function wordWithAudio(
+  word,
+  { size = "lg", allowBlur = true, autoPlay = true, withAudio = true } = {},
+) {
   const user = auth.getUser() || {};
   const blurOn = Boolean(allowBlur && user.voice_mode);
 
@@ -186,6 +189,10 @@ export function wordWithAudio(word, { size = "lg", allowBlur = true, autoPlay = 
     },
     word.english,
   );
+
+  if (!withAudio) {
+    return h("span", { class: "word-with-audio" }, [textEl]);
+  }
 
   const btn = h(
     "button",

@@ -88,17 +88,21 @@ async def _all_category_ids(db: AsyncSession) -> list[int]:
 
 
 async def ensure_active_words(
-    db: AsyncSession, user: User, category_id: int | None = None
+    db: AsyncSession,
+    user: User,
+    category_id: int | None = None,
+    force_daily: bool = False,
 ) -> int:
     """Открывает недостающие активные слова: слоты и дневной лимит считаются на каждую категорию отдельно.
 
+    При force_daily=True дневной лимит игнорируется — заполняем слоты «как будто новый день».
     Возвращает количество вновь активированных слов.
     """
     slots = max(1, int(user.active_slots or 5))
     daily_cap = max(1, int(user.daily_new_limit or 10))
 
     active_map = await _active_counts_by_category(db, user.id)
-    today_map = await _activations_today_by_category(db, user.id)
+    today_map = {} if force_daily else await _activations_today_by_category(db, user.id)
 
     if category_id is not None:
         categories = [category_id]
@@ -112,7 +116,7 @@ async def ensure_active_words(
         current = int(active_map.get(cid, 0))
         today_in_cat = int(today_map.get(cid, 0))
         need_slots = slots - current
-        budget = daily_cap - today_in_cat
+        budget = need_slots if force_daily else daily_cap - today_in_cat
         need = min(need_slots, budget)
         if need <= 0:
             continue

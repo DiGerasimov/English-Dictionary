@@ -119,6 +119,40 @@ export async function renderProfile(root) {
               "Максимум новых слов, которые система откроет за сутки в каждой категории отдельно.",
             ),
           ]),
+          h("div", { class: "pt-2 border-t border-white/10 space-y-2" }, [
+            h(
+              "button",
+              {
+                class: "btn-outline w-full text-sm",
+                onclick: async (e) => {
+                  const btn = e.currentTarget;
+                  btn.disabled = true;
+                  const prevText = btn.textContent;
+                  btn.textContent = "Открываем…";
+                  try {
+                    const res = await api.refillWords();
+                    const n = Number(res?.activated || 0);
+                    if (n > 0) {
+                      toast(`Открыто новых слов: ${n}`, "success");
+                    } else {
+                      toast("Нет новых слов для открытия", "info");
+                    }
+                  } catch (err) {
+                    toast(err.message, "error");
+                  } finally {
+                    btn.disabled = false;
+                    btn.textContent = prevText;
+                  }
+                },
+              },
+              "Получить новые слова сейчас",
+            ),
+            h(
+              "div",
+              { class: "text-xs text-slate-400" },
+              "Открывает новые слова во всех категориях, не дожидаясь следующего дня. Лимит «новых слов в сутки» игнорируется.",
+            ),
+          ]),
           h("div", { class: "pt-2 border-t border-white/10 space-y-1" }, [
             h(
               "label",

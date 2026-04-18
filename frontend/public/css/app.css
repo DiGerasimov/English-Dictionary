@@ -247,12 +247,6 @@ button {
 .quiz-screen {
   display: flex;
   flex-direction: column;
-  min-height: calc(100dvh - 5.5rem);
-}
-@media (min-width: 1024px) {
-  .quiz-screen {
-    min-height: calc(100vh - 1rem);
-  }
 }
 
 .quiz-card {

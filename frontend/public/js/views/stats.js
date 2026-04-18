@@ -61,8 +61,10 @@ export async function renderStats(root) {
     kpiCard("Вчера выучено", overview.learned_yesterday, "📅", "slate"),
     kpiCard("Всего изучено", overview.learned_total, "📚", "brand"),
     kpiCard("Серия дней", overview.streak_days, "🔥", "orange"),
-    kpiCard("Правильно сегодня", overview.correct_today, "✓", "emerald"),
-    kpiCard("Ошибок сегодня", overview.incorrect_today, "✗", "rose"),
+    kpiCard("Правильно (попыток)", overview.correct_today, "✓", "emerald"),
+    kpiCard("Правильно (слов)", overview.correct_today_words ?? 0, "🎯", "emerald"),
+    kpiCard("Ошибок (попыток)", overview.incorrect_today, "✗", "rose"),
+    kpiCard("Ошибок (слов)", overview.incorrect_today_words ?? 0, "🎯", "rose"),
     kpiCard("Всего в банке", overview.seen_total, "👁", "slate"),
     kpiCard("Точность", `${Math.round((overview.accuracy_total || 0) * 100)}%`, "📈", "brand"),
   );
