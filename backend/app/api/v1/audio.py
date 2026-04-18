@@ -1,11 +1,12 @@
 import logging
 
-from fastapi import APIRouter, Depends, HTTPException, Response
+from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_db
 from app.core.deps import get_current_user
+from app.core.rate_limit import limiter
 from app.models import User, Word, WordAudio
 from app.services.tts import get_tts_engine
 
@@ -15,7 +16,9 @@ router = APIRouter(prefix="/words", tags=["audio"])
 
 
 @router.get("/{word_id}/audio")
+@limiter.limit("30/minute")
 async def get_word_audio(
+    request: Request,
     word_id: int,
     _user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),

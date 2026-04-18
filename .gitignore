@@ -1,4 +1,6 @@
 .env
+*.pem
+certs/
 __pycache__/
 *.pyc
 *.pyo

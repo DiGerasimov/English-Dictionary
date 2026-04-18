@@ -23,13 +23,16 @@ class Settings(BaseSettings):
     tts_models_dir: str = Field("/app/models/tts", alias="TTS_MODELS_DIR")
     tts_batch_concurrency: int = Field(10, alias="TTS_BATCH_CONCURRENCY")
 
-    admin_email: str = Field("", alias="ADMIN_EMAIL")
-
     @property
     def cors_origins_list(self) -> list[str]:
-        if self.cors_origins.strip() in {"", "*"}:
-            return ["*"]
-        return [o.strip() for o in self.cors_origins.split(",") if o.strip()]
+        """Список доверенных origin'ов. При пустом значении приложение падает на старте."""
+        raw = (self.cors_origins or "").strip()
+        if not raw or raw == "*":
+            raise RuntimeError(
+                "CORS_ORIGINS не задан или равен '*'. "
+                "Укажите явные домены, например http://localhost:8080"
+            )
+        return [o.strip() for o in raw.split(",") if o.strip()]
 
 
 @lru_cache

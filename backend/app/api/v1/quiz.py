@@ -1,12 +1,13 @@
 from datetime import datetime, timezone
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
 from app.core.database import get_db
 from app.core.deps import get_current_user
+from app.core.rate_limit import limiter
 from app.models import QuizAttempt, User, UserWordProgress, Word
 from app.models.progress import LEARNED_THRESHOLD
 from app.schemas.quiz import QuizAnswerIn, QuizAnswerOut, QuizQuestionOut
@@ -54,7 +55,9 @@ def _word_to_out(word: Word, progress: UserWordProgress | None) -> WordOut:
 
 
 @router.get("/next", response_model=QuizQuestionOut)
+@limiter.limit("60/minute")
 async def next_question(
+    request: Request,
     scope: str = Query("all", pattern="^(all|category)$"),
     category_id: int | None = Query(None),
     only_unlearned: bool = Query(True),
@@ -96,7 +99,9 @@ async def next_question(
 
 
 @router.post("/answer", response_model=QuizAnswerOut)
+@limiter.limit("60/minute")
 async def submit_answer(
+    request: Request,
     data: QuizAnswerIn,
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),

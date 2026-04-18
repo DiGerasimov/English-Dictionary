@@ -1,3 +1,4 @@
+import uuid
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
@@ -6,28 +7,44 @@ from passlib.context import CryptContext
 
 from app.core.config import settings
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+# Поддерживаем argon2 (новые пароли) + bcrypt (старые записи), deprecated="auto"
+# означает: при успешном логине старый bcrypt-хеш будет перехеширован в argon2.
+pwd_context = CryptContext(schemes=["argon2", "bcrypt"], deprecated="auto")
 
 
 def hash_password(password: str) -> str:
-    """Вернёт bcrypt-хеш пароля."""
+    """Возвращает argon2-хеш пароля."""
     return pwd_context.hash(password)
 
 
 def verify_password(raw: str, hashed: str) -> bool:
-    """Проверяет соответствие пароля и хеша."""
-    return pwd_context.verify(raw, hashed)
+    """Проверяет пароль против хеша (bcrypt или argon2)."""
+    try:
+        return pwd_context.verify(raw, hashed)
+    except Exception:
+        return False
+
+
+def needs_rehash(hashed: str) -> bool:
+    """True, если хеш пора обновить (например, был bcrypt, стал argon2)."""
+    return pwd_context.needs_update(hashed)
 
 
 def create_access_token(subject: str | int, expires_minutes: int | None = None) -> str:
-    """Создаёт JWT access-token с переданным subject (user id)."""
-    expire = datetime.now(timezone.utc) + timedelta(minutes=expires_minutes or settings.jwt_expire_minutes)
-    payload: dict[str, Any] = {"sub": str(subject), "exp": expire}
+    """JWT access-token с jti/iat/exp и subject=user_id."""
+    now = datetime.now(timezone.utc)
+    expire = now + timedelta(minutes=expires_minutes or settings.jwt_expire_minutes)
+    payload: dict[str, Any] = {
+        "sub": str(subject),
+        "iat": int(now.timestamp()),
+        "exp": expire,
+        "jti": uuid.uuid4().hex,
+    }
     return jwt.encode(payload, settings.jwt_secret, algorithm=settings.jwt_algorithm)
 
 
 def decode_token(token: str) -> dict[str, Any] | None:
-    """Декодирует JWT, возвращает payload или None при ошибке."""
+    """Декодирует JWT, возвращает payload или None при ошибке/истёкшем сроке."""
     try:
         return jwt.decode(token, settings.jwt_secret, algorithms=[settings.jwt_algorithm])
     except JWTError:

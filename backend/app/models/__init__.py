@@ -1,4 +1,5 @@
 from app.models.attempt import QuizAttempt
+from app.models.audit import AuditLog
 from app.models.category import Category
 from app.models.progress import UserWordFormProgress, UserWordProgress
 from app.models.user import User
@@ -8,6 +9,7 @@ from app.models.word_audio import WordAudio
 from app.models.word_form import FormType, WordForm
 
 __all__ = [
+    "AuditLog",
     "Category",
     "Difficulty",
     "FormType",

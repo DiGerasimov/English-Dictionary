@@ -175,7 +175,7 @@ async def list_dictionary(
     status: str | None = Query(
         None, description="learning — в процессе, learned — изученные. Пусто = всё в банке"
     ),
-    q: str | None = Query(None, description="Поиск по английскому/русскому"),
+    q: str | None = Query(None, min_length=2, max_length=64, description="Поиск по английскому/русскому"),
     sort: str = Query("recent", pattern="^(recent|alpha|progress)$"),
     order: str = Query("desc", pattern="^(asc|desc)$"),
     cursor: int | None = Query(None, ge=0),

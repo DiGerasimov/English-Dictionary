@@ -119,7 +119,7 @@ async def _compute_streak(db: AsyncSession, user_id: int, today: date) -> int:
 
 @router.get("/timeline", response_model=TimelineOut)
 async def timeline(
-    days: int = Query(30, ge=1, le=365),
+    days: int = Query(30, ge=1, le=90),
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> TimelineOut:

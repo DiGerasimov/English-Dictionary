@@ -78,8 +78,10 @@ export const api = {
   me: () => request("/auth/me"),
   updateSettings: (payload) =>
     request("/auth/me/settings", { method: "PATCH", body: payload }),
-  resetProgress: () => request("/auth/me/reset-progress", { method: "POST" }),
-  refillWords: () => request("/auth/me/refill-words", { method: "POST" }),
+  resetProgress: (password) =>
+    request("/auth/me/reset-progress", { method: "POST", body: { password } }),
+  refillWords: (password) =>
+    request("/auth/me/refill-words", { method: "POST", body: { password } }),
 
   categories: () => request("/categories"),
   pinCategory: (id) => request(`/categories/${id}/pin`, { method: "POST" }),

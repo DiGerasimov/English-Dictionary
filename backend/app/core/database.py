@@ -10,7 +10,15 @@ class Base(DeclarativeBase):
     """Базовый класс для всех моделей."""
 
 
-engine = create_async_engine(settings.database_url, pool_pre_ping=True, future=True)
+engine = create_async_engine(
+    settings.database_url,
+    pool_pre_ping=True,
+    pool_size=10,
+    max_overflow=10,
+    pool_timeout=10,
+    pool_recycle=1800,
+    future=True,
+)
 
 AsyncSessionLocal = async_sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)
 

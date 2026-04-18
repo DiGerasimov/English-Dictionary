@@ -130,7 +130,13 @@ export async function renderProfile(root) {
                   const prevText = btn.textContent;
                   btn.textContent = "Открываем…";
                   try {
-                    const res = await api.refillWords();
+                    const pwd = prompt("Введите пароль для подтверждения:");
+                    if (!pwd) {
+                      btn.disabled = false;
+                      btn.textContent = prevText;
+                      return;
+                    }
+                    const res = await api.refillWords(pwd);
                     const n = Number(res?.activated || 0);
                     if (n > 0) {
                       toast(`Открыто новых слов: ${n}`, "success");
@@ -262,6 +268,13 @@ function openResetConfirm() {
   const COUNTDOWN = 5;
   let remaining = COUNTDOWN;
 
+  const pwdInput = h("input", {
+    type: "password",
+    class: "w-full px-3 py-2 rounded-xl bg-white/5 border border-white/10 text-sm",
+    placeholder: "Пароль для подтверждения",
+    autocomplete: "current-password",
+  });
+
   const confirmBtn = h(
     "button",
     {
@@ -269,10 +282,15 @@ function openResetConfirm() {
         "flex-1 py-2.5 px-4 rounded-xl bg-rose-500 text-white font-semibold disabled:opacity-60 disabled:cursor-not-allowed",
       disabled: "disabled",
       onclick: async () => {
+        const pwd = pwdInput.value.trim();
+        if (!pwd) {
+          toast("Введите пароль", "error");
+          return;
+        }
         confirmBtn.disabled = true;
         confirmBtn.textContent = "Сбрасываем…";
         try {
-          await api.resetProgress();
+          await api.resetProgress(pwd);
           toast("Прогресс сброшен", "success");
           close();
           location.hash = "#/learn";
@@ -302,6 +320,7 @@ function openResetConfirm() {
       { class: "text-sm text-slate-400 leading-relaxed" },
       "Будут удалены все изучаемые и изученные слова, счётчики и история квизов. Это действие необратимо.",
     ),
+    pwdInput,
     h("div", { class: "flex gap-2" }, [cancelBtn, confirmBtn]),
   ]);
 

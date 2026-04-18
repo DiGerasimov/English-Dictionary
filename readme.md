@@ -47,6 +47,35 @@ make up
 | `make seed-all` | Категории + слова |
 | `make psql` | Зайти в psql контейнера БД |
 | `make lint` | Запустить ruff + black |
+| `make gen-secret` | Сгенерировать новый `JWT_SECRET` (64 символа) |
+| `make create-admin [email=...]` | Повысить существующего пользователя до админа (без аргумента возьмёт `ADMIN_EMAIL` из `.env`) |
+| `make audit` | Показать последние 50 событий журнала безопасности |
+
+## Безопасность
+
+Чек-лист перед выкатом на VPS:
+
+1. `cp .env.example .env` и заменить:
+   - `POSTGRES_PASSWORD` и пароль внутри `DATABASE_URL` — строго одинаковые;
+   - `JWT_SECRET` — результат `make gen-secret` (64+ случайных символов);
+   - `CORS_ORIGINS` — только реальные origin'ы фронта (указывать явно, `*` запрещён).
+2. Задать `ADMIN_EMAIL` в `.env`. При старте контейнера (`make up` / `make restart`) автоматически выполняется `python -m app.scripts.create_admin --auto`: если пользователь с таким email уже есть в БД — ему выдаётся `is_admin=True`, иначе шаг тихо пропускается. Так что достаточно зарегистрироваться через фронт и перезапустить backend. Можно и вручную в любой момент: `make create-admin` (возьмёт email из `.env`) или `make create-admin email=<другой>`.
+3. Firewall VPS: оставить снаружи только `22/tcp` (SSH) и `80/tcp` (фронт/API). Порт backend`:8000` внутри compose-сети и наружу не торчит.
+4. Когда появится домен — раскомментировать TLS-блок в `frontend/nginx.conf`, положить сертификаты в `frontend/certs/`, включить HSTS.
+
+Что уже защищено «из коробки»:
+
+- **Rate limit** в nginx (`auth` — 5 req/min, общий API — 30 req/s) и в FastAPI через slowapi (login/register/reset/refill — 5/мин; quiz — 60/мин; audio — 30/мин).
+- **Антибрутфорс логина**: 10 подряд неудач → блокировка аккаунта на 15 минут.
+- **Unified 401** — ответ на неверный email и неверный пароль неотличим.
+- **Argon2** для новых паролей (старые bcrypt-хеши мигрируют при логине). Пароль: 8+ символов, буква + цифра обязательно.
+- **JWT** с `jti` и `iat`, время жизни 2 часа по умолчанию.
+- **Destructive-ручки** (`/auth/me/reset-progress`, `/auth/me/refill-words`) требуют повторный ввод пароля.
+- **Security-заголовки**: `Content-Security-Policy`, `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy`, `Permissions-Policy`, `server_tokens off`.
+- **Docker**: backend бежит под non-root uid 1001, `no-new-privileges`, лимиты `mem_limit` и `pids_limit`, healthcheck у всех сервисов, ротация json-file-логов.
+- **Аудит** пишется в таблицу `audit_log` (логины, ресет прогресса, админ-действия). Смотреть: `make audit`.
+- **Индексы** под регистронезависимый поиск по словам и под статистику квизов.
+- **Пул БД** ограничен: `pool_size=10`, `max_overflow=10` — не даст одному всплеску положить Postgres.
 
 ## Структура
 
