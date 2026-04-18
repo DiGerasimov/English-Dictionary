@@ -96,7 +96,7 @@ function renderCategoryList(host, byCategory) {
   const listHost = h("div", { class: "space-y-2" });
   const sortPanel = h("div", {
     class:
-      "sticky bottom-20 sm:bottom-4 z-30 mt-4 glass-panel rounded-2xl p-3 flex flex-wrap items-center gap-2",
+      "mt-4 glass-panel rounded-2xl p-3 flex flex-wrap items-center gap-2",
   });
 
   host.append(listHost, sortPanel);
