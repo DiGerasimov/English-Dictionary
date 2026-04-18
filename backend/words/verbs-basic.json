@@ -1,0 +1,388 @@
+{
+  "slug": "verbs-basic",
+  "words": [
+    {"english": "be", "russian": "быть", "description": "Глагол существования", "transcription_ipa": "biː", "transcription_ru": "би", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "was/were", "russian": "был/были", "transcription_ipa": "wɒz/wɜːr", "transcription_ru": "воз/вё"},
+      {"form_type": "past_participle", "english": "been", "russian": "был (прич.)", "transcription_ipa": "biːn", "transcription_ru": "бин"},
+      {"form_type": "present_participle", "english": "being", "russian": "будучи", "transcription_ipa": "ˈbiː.ɪŋ", "transcription_ru": "биинг"},
+      {"form_type": "third_person", "english": "is", "russian": "есть", "transcription_ipa": "ɪz", "transcription_ru": "из"}
+    ]},
+    {"english": "have", "russian": "иметь", "description": "Обладать чем-то", "transcription_ipa": "hæv", "transcription_ru": "хэв", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "had", "russian": "имел", "transcription_ipa": "hæd", "transcription_ru": "хэд"},
+      {"form_type": "past_participle", "english": "had", "russian": "имел (прич.)", "transcription_ipa": "hæd", "transcription_ru": "хэд"},
+      {"form_type": "present_participle", "english": "having", "russian": "имея", "transcription_ipa": "ˈhæv.ɪŋ", "transcription_ru": "хэвинг"},
+      {"form_type": "third_person", "english": "has", "russian": "имеет", "transcription_ipa": "hæz", "transcription_ru": "хэз"}
+    ]},
+    {"english": "do", "russian": "делать", "description": "Выполнять действие", "transcription_ipa": "duː", "transcription_ru": "ду", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "did", "russian": "делал", "transcription_ipa": "dɪд", "transcription_ru": "дид"},
+      {"form_type": "past_participle", "english": "done", "russian": "сделанный", "transcription_ipa": "dʌn", "transcription_ru": "дан"},
+      {"form_type": "present_participle", "english": "doing", "russian": "делая", "transcription_ipa": "ˈduː.ɪŋ", "transcription_ru": "дуинг"},
+      {"form_type": "third_person", "english": "does", "russian": "делает", "transcription_ipa": "dʌz", "transcription_ru": "даз"}
+    ]},
+    {"english": "say", "russian": "говорить", "description": "Произносить", "transcription_ipa": "seɪ", "transcription_ru": "сэй", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "said", "russian": "сказал", "transcription_ipa": "sed", "transcription_ru": "сэд"},
+      {"form_type": "past_participle", "english": "said", "russian": "сказанный", "transcription_ipa": "sed", "transcription_ru": "сэд"},
+      {"form_type": "present_participle", "english": "saying", "russian": "говоря", "transcription_ipa": "ˈseɪ.ɪŋ", "transcription_ru": "сэйинг"}
+    ]},
+    {"english": "go", "russian": "идти", "description": "Двигаться куда-то", "transcription_ipa": "ɡəʊ", "transcription_ru": "гоу", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "went", "russian": "пошёл", "transcription_ipa": "went", "transcription_ru": "вэнт"},
+      {"form_type": "past_participle", "english": "gone", "russian": "ушедший", "transcription_ipa": "ɡɒn", "transcription_ru": "гон"},
+      {"form_type": "present_participle", "english": "going", "russian": "идя", "transcription_ipa": "ˈɡəʊ.ɪŋ", "transcription_ru": "гоуинг"}
+    ]},
+    {"english": "get", "russian": "получать", "description": "Получать, становиться", "transcription_ipa": "ɡet", "transcription_ru": "гэт", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "got", "russian": "получил", "transcription_ipa": "ɡɒt", "transcription_ru": "гот"},
+      {"form_type": "past_participle", "english": "gotten", "russian": "полученный", "transcription_ipa": "ˈɡɒt.ən", "transcription_ru": "готэн"},
+      {"form_type": "present_participle", "english": "getting", "russian": "получая", "transcription_ipa": "ˈɡet.ɪŋ", "transcription_ru": "гэтинг"}
+    ]},
+    {"english": "make", "russian": "делать/создавать", "description": "Создавать, изготавливать", "transcription_ipa": "meɪk", "transcription_ru": "мэйк", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "made", "russian": "сделал", "transcription_ipa": "meɪд", "transcription_ru": "мэйд"},
+      {"form_type": "past_participle", "english": "made", "russian": "сделанный", "transcription_ipa": "meɪд", "transcription_ru": "мэйд"},
+      {"form_type": "present_participle", "english": "making", "russian": "делая", "transcription_ipa": "ˈmeɪ.kɪŋ", "transcription_ru": "мэйкинг"}
+    ]},
+    {"english": "know", "russian": "знать", "description": "Обладать знанием", "transcription_ipa": "nəʊ", "transcription_ru": "ноу", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "knew", "russian": "знал", "transcription_ipa": "njuː", "transcription_ru": "нью"},
+      {"form_type": "past_participle", "english": "known", "russian": "известный", "transcription_ipa": "nəʊn", "transcription_ru": "ноун"},
+      {"form_type": "present_participle", "english": "knowing", "russian": "зная", "transcription_ipa": "ˈnəʊ.ɪŋ", "transcription_ru": "ноуинг"}
+    ]},
+    {"english": "think", "russian": "думать", "description": "Обдумывать", "transcription_ipa": "θɪŋk", "transcription_ru": "синк", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "thought", "russian": "думал", "transcription_ipa": "θɔːt", "transcription_ru": "сот"},
+      {"form_type": "past_participle", "english": "thought", "russian": "продуманный", "transcription_ipa": "θɔːt", "transcription_ru": "сот"},
+      {"form_type": "present_participle", "english": "thinking", "russian": "думая", "transcription_ipa": "ˈθɪŋ.kɪŋ", "transcription_ru": "синкинг"}
+    ]},
+    {"english": "take", "russian": "брать", "description": "Взять в руки", "transcription_ipa": "teɪk", "transcription_ru": "тэйк", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "took", "russian": "взял", "transcription_ipa": "tʊk", "transcription_ru": "тук"},
+      {"form_type": "past_participle", "english": "taken", "russian": "взятый", "transcription_ipa": "ˈteɪ.kən", "transcription_ru": "тэйкн"},
+      {"form_type": "present_participle", "english": "taking", "russian": "беря", "transcription_ipa": "ˈteɪ.kɪŋ", "transcription_ru": "тэйкинг"}
+    ]},
+    {"english": "see", "russian": "видеть", "description": "Воспринимать зрением", "transcription_ipa": "siː", "transcription_ru": "си", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "saw", "russian": "видел", "transcription_ipa": "sɔː", "transcription_ru": "со"},
+      {"form_type": "past_participle", "english": "seen", "russian": "увиденный", "transcription_ipa": "siːn", "transcription_ru": "син"},
+      {"form_type": "present_participle", "english": "seeing", "russian": "видя", "transcription_ipa": "ˈsiː.ɪŋ", "transcription_ru": "сиинг"}
+    ]},
+    {"english": "come", "russian": "приходить", "description": "Перемещаться к говорящему", "transcription_ipa": "kʌm", "transcription_ru": "кам", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "came", "russian": "пришёл", "transcription_ipa": "keɪm", "transcription_ru": "кэйм"},
+      {"form_type": "past_participle", "english": "come", "russian": "пришедший", "transcription_ipa": "kʌm", "transcription_ru": "кам"},
+      {"form_type": "present_participle", "english": "coming", "russian": "приходя", "transcription_ipa": "ˈkʌm.ɪŋ", "transcription_ru": "каминг"}
+    ]},
+    {"english": "want", "russian": "хотеть", "description": "Желать", "transcription_ipa": "wɒnt", "transcription_ru": "вонт", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "wanted", "russian": "хотел", "transcription_ipa": "ˈwɒn.tɪд", "transcription_ru": "вонтид"},
+      {"form_type": "past_participle", "english": "wanted", "russian": "желаемый", "transcription_ipa": "ˈwɒn.tɪд", "transcription_ru": "вонтид"},
+      {"form_type": "present_participle", "english": "wanting", "russian": "желая", "transcription_ipa": "ˈwɒn.tɪŋ", "transcription_ru": "вонтинг"}
+    ]},
+    {"english": "look", "russian": "смотреть", "description": "Направлять взгляд", "transcription_ipa": "lʊk", "transcription_ru": "лук", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "looked", "russian": "смотрел", "transcription_ipa": "lʊkt", "transcription_ru": "лукт"},
+      {"form_type": "past_participle", "english": "looked", "russian": "посмотренный", "transcription_ipa": "lʊkt", "transcription_ru": "лукт"},
+      {"form_type": "present_participle", "english": "looking", "russian": "смотря", "transcription_ipa": "ˈlʊk.ɪŋ", "transcription_ru": "лукинг"}
+    ]},
+    {"english": "use", "russian": "использовать", "description": "Применять", "transcription_ipa": "juːz", "transcription_ru": "юз", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "used", "russian": "использовал", "transcription_ipa": "juːzd", "transcription_ru": "юзд"},
+      {"form_type": "past_participle", "english": "used", "russian": "использованный", "transcription_ipa": "juːzd", "transcription_ru": "юзд"},
+      {"form_type": "present_participle", "english": "using", "russian": "используя", "transcription_ipa": "ˈjuː.zɪŋ", "transcription_ru": "юзинг"}
+    ]},
+    {"english": "find", "russian": "находить", "description": "Обнаруживать", "transcription_ipa": "faɪnd", "transcription_ru": "файнд", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "found", "russian": "нашёл", "transcription_ipa": "faʊnd", "transcription_ru": "фаунд"},
+      {"form_type": "past_participle", "english": "found", "russian": "найденный", "transcription_ipa": "faʊnd", "transcription_ru": "фаунд"},
+      {"form_type": "present_participle", "english": "finding", "russian": "находя", "transcription_ipa": "ˈfaɪn.дɪŋ", "transcription_ru": "файндинг"}
+    ]},
+    {"english": "give", "russian": "давать", "description": "Передавать что-то", "transcription_ipa": "ɡɪv", "transcription_ru": "гив", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "gave", "russian": "дал", "transcription_ipa": "ɡeɪv", "transcription_ru": "гэйв"},
+      {"form_type": "past_participle", "english": "given", "russian": "данный", "transcription_ipa": "ˈɡɪv.ən", "transcription_ru": "гивн"},
+      {"form_type": "present_participle", "english": "giving", "russian": "давая", "transcription_ipa": "ˈɡɪv.ɪŋ", "transcription_ru": "гивинг"}
+    ]},
+    {"english": "tell", "russian": "рассказывать", "description": "Сообщать кому-то", "transcription_ipa": "tel", "transcription_ru": "тэл", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "told", "russian": "рассказал", "transcription_ipa": "təʊld", "transcription_ru": "тоулд"},
+      {"form_type": "past_participle", "english": "told", "russian": "рассказанный", "transcription_ipa": "təʊld", "transcription_ru": "тоулд"},
+      {"form_type": "present_participle", "english": "telling", "russian": "рассказывая", "transcription_ipa": "ˈtel.ɪŋ", "transcription_ru": "тэлинг"}
+    ]},
+    {"english": "work", "russian": "работать", "description": "Выполнять работу", "transcription_ipa": "wɜːk", "transcription_ru": "вёк", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "worked", "russian": "работал", "transcription_ipa": "wɜːkt", "transcription_ru": "вёкт"},
+      {"form_type": "past_participle", "english": "worked", "russian": "отработанный", "transcription_ipa": "wɜːkt", "transcription_ru": "вёкт"},
+      {"form_type": "present_participle", "english": "working", "russian": "работая", "transcription_ipa": "ˈwɜː.kɪŋ", "transcription_ru": "вёкинг"}
+    ]},
+    {"english": "feel", "russian": "чувствовать", "description": "Испытывать чувства", "transcription_ipa": "fiːl", "transcription_ru": "фил", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "felt", "russian": "чувствовал", "transcription_ipa": "felt", "transcription_ru": "фэлт"},
+      {"form_type": "past_participle", "english": "felt", "russian": "ощущённый", "transcription_ipa": "felt", "transcription_ru": "фэлт"},
+      {"form_type": "present_participle", "english": "feeling", "russian": "чувствуя", "transcription_ipa": "ˈfiː.lɪŋ", "transcription_ru": "филинг"}
+    ]},
+    {"english": "try", "russian": "пробовать", "description": "Пытаться сделать", "transcription_ipa": "traɪ", "transcription_ru": "трай", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "tried", "russian": "пробовал", "transcription_ipa": "traɪd", "transcription_ru": "трайд"},
+      {"form_type": "past_participle", "english": "tried", "russian": "опробованный", "transcription_ipa": "traɪd", "transcription_ru": "трайд"},
+      {"form_type": "present_participle", "english": "trying", "russian": "пробуя", "transcription_ipa": "ˈtraɪ.ɪŋ", "transcription_ru": "трайинг"}
+    ]},
+    {"english": "ask", "russian": "спрашивать", "description": "Задавать вопрос", "transcription_ipa": "ɑːsk", "transcription_ru": "аск", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "asked", "russian": "спрашивал", "transcription_ipa": "ɑːskt", "transcription_ru": "аскт"},
+      {"form_type": "past_participle", "english": "asked", "russian": "спрошенный", "transcription_ipa": "ɑːskt", "transcription_ru": "аскт"},
+      {"form_type": "present_participle", "english": "asking", "russian": "спрашивая", "transcription_ipa": "ˈɑːsk.ɪŋ", "transcription_ru": "аскинг"}
+    ]},
+    {"english": "help", "russian": "помогать", "description": "Оказывать помощь", "transcription_ipa": "help", "transcription_ru": "хэлп", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "helped", "russian": "помогал", "transcription_ipa": "helpt", "transcription_ru": "хэлпт"},
+      {"form_type": "past_participle", "english": "helped", "russian": "помогший", "transcription_ipa": "helpt", "transcription_ru": "хэлпт"},
+      {"form_type": "present_participle", "english": "helping", "russian": "помогая", "transcription_ipa": "ˈhelp.ɪŋ", "transcription_ru": "хэлпинг"}
+    ]},
+    {"english": "talk", "russian": "разговаривать", "description": "Вести беседу", "transcription_ipa": "tɔːk", "transcription_ru": "ток", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "talked", "russian": "разговаривал", "transcription_ipa": "tɔːkt", "transcription_ru": "токт"},
+      {"form_type": "past_participle", "english": "talked", "russian": "поговоривший", "transcription_ipa": "tɔːkt", "transcription_ru": "токт"},
+      {"form_type": "present_participle", "english": "talking", "russian": "разговаривая", "transcription_ipa": "ˈtɔːk.ɪŋ", "transcription_ru": "токинг"}
+    ]},
+    {"english": "start", "russian": "начинать", "description": "Начинать действие", "transcription_ipa": "stɑːt", "transcription_ru": "стат", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "started", "russian": "начал", "transcription_ipa": "ˈstɑː.tɪд", "transcription_ru": "статид"},
+      {"form_type": "past_participle", "english": "started", "russian": "начатый", "transcription_ipa": "ˈstɑː.tɪд", "transcription_ru": "статид"},
+      {"form_type": "present_participle", "english": "starting", "russian": "начиная", "transcription_ipa": "ˈstɑː.tɪŋ", "transcription_ru": "статинг"}
+    ]},
+    {"english": "show", "russian": "показывать", "description": "Демонстрировать", "transcription_ipa": "ʃəʊ", "transcription_ru": "шоу", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "showed", "russian": "показал", "transcription_ipa": "ʃəʊд", "transcription_ru": "шоуд"},
+      {"form_type": "past_participle", "english": "shown", "russian": "показанный", "transcription_ipa": "ʃəʊn", "transcription_ru": "шоун"},
+      {"form_type": "present_participle", "english": "showing", "russian": "показывая", "transcription_ipa": "ˈʃəʊ.ɪŋ", "transcription_ru": "шоуинг"}
+    ]},
+    {"english": "hear", "russian": "слышать", "description": "Воспринимать слухом", "transcription_ipa": "hɪər", "transcription_ru": "хиэ", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "heard", "russian": "слышал", "transcription_ipa": "hɜːд", "transcription_ru": "хёд"},
+      {"form_type": "past_participle", "english": "heard", "russian": "услышанный", "transcription_ipa": "hɜːд", "transcription_ru": "хёд"},
+      {"form_type": "present_participle", "english": "hearing", "russian": "слыша", "transcription_ipa": "ˈhɪə.rɪŋ", "transcription_ru": "хиэринг"}
+    ]},
+    {"english": "play", "russian": "играть", "description": "Участвовать в игре", "transcription_ipa": "pleɪ", "transcription_ru": "плэй", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "played", "russian": "играл", "transcription_ipa": "pleɪд", "transcription_ru": "плэйд"},
+      {"form_type": "past_participle", "english": "played", "russian": "сыгранный", "transcription_ipa": "pleɪд", "transcription_ru": "плэйд"},
+      {"form_type": "present_participle", "english": "playing", "russian": "играя", "transcription_ipa": "ˈpleɪ.ɪŋ", "transcription_ru": "плэйинг"}
+    ]},
+    {"english": "run", "russian": "бежать", "description": "Быстро передвигаться", "transcription_ipa": "rʌn", "transcription_ru": "ран", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "ran", "russian": "бежал", "transcription_ipa": "ræn", "transcription_ru": "рэн"},
+      {"form_type": "past_participle", "english": "run", "russian": "пробежавший", "transcription_ipa": "rʌn", "transcription_ru": "ран"},
+      {"form_type": "present_participle", "english": "running", "russian": "бегая", "transcription_ipa": "ˈrʌn.ɪŋ", "transcription_ru": "ранинг"}
+    ]},
+    {"english": "move", "russian": "двигаться", "description": "Перемещаться", "transcription_ipa": "muːv", "transcription_ru": "мув", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "moved", "russian": "двигался", "transcription_ipa": "muːвд", "transcription_ru": "мувд"},
+      {"form_type": "past_participle", "english": "moved", "russian": "сдвинутый", "transcription_ipa": "muːвд", "transcription_ru": "мувд"},
+      {"form_type": "present_participle", "english": "moving", "russian": "двигаясь", "transcription_ipa": "ˈmuː.vɪŋ", "transcription_ru": "мувинг"}
+    ]},
+    {"english": "live", "russian": "жить", "description": "Существовать, проживать", "transcription_ipa": "lɪv", "transcription_ru": "лив", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "lived", "russian": "жил", "transcription_ipa": "lɪвд", "transcription_ru": "ливд"},
+      {"form_type": "past_participle", "english": "lived", "russian": "прожитый", "transcription_ipa": "lɪвд", "transcription_ru": "ливд"},
+      {"form_type": "present_participle", "english": "living", "russian": "живя", "transcription_ipa": "ˈlɪv.ɪŋ", "transcription_ru": "ливинг"}
+    ]},
+    {"english": "believe", "russian": "верить", "description": "Доверять, считать правдой", "transcription_ipa": "bɪˈliːv", "transcription_ru": "билив", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "believed", "russian": "верил", "transcription_ipa": "bɪˈliːвд", "transcription_ru": "биливд"},
+      {"form_type": "past_participle", "english": "believed", "russian": "поверивший", "transcription_ipa": "bɪˈliːвд", "transcription_ru": "биливд"},
+      {"form_type": "present_participle", "english": "believing", "russian": "веря", "transcription_ipa": "bɪˈliː.vɪŋ", "transcription_ru": "биливинг"}
+    ]},
+    {"english": "bring", "russian": "приносить", "description": "Доставлять что-то", "transcription_ipa": "brɪŋ", "transcription_ru": "бринг", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "brought", "russian": "принёс", "transcription_ipa": "brɔːt", "transcription_ru": "брот"},
+      {"form_type": "past_participle", "english": "brought", "russian": "принесённый", "transcription_ipa": "brɔːt", "transcription_ru": "брот"},
+      {"form_type": "present_participle", "english": "bringing", "russian": "принося", "transcription_ipa": "ˈbrɪŋ.ɪŋ", "transcription_ru": "брингинг"}
+    ]},
+    {"english": "happen", "russian": "случаться", "description": "Происходить", "transcription_ipa": "ˈhæp.ən", "transcription_ru": "хэпэн", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "happened", "russian": "случилось", "transcription_ipa": "ˈhæp.ənd", "transcription_ru": "хэпэнд"},
+      {"form_type": "past_participle", "english": "happened", "russian": "произошедшее", "transcription_ipa": "ˈhæp.ənd", "transcription_ru": "хэпэнд"},
+      {"form_type": "present_participle", "english": "happening", "russian": "случаясь", "transcription_ipa": "ˈhæp.ən.ɪŋ", "transcription_ru": "хэпэнинг"}
+    ]},
+    {"english": "write", "russian": "писать", "description": "Записывать текст", "transcription_ipa": "raɪt", "transcription_ru": "райт", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "wrote", "russian": "писал", "transcription_ipa": "rəʊt", "transcription_ru": "роут"},
+      {"form_type": "past_participle", "english": "written", "russian": "написанный", "transcription_ipa": "ˈrɪt.ən", "transcription_ru": "ритн"},
+      {"form_type": "present_participle", "english": "writing", "russian": "пиша", "transcription_ipa": "ˈraɪ.tɪŋ", "transcription_ru": "райтинг"}
+    ]},
+    {"english": "sit", "russian": "сидеть", "description": "Находиться в сидячем положении", "transcription_ipa": "sɪt", "transcription_ru": "сит", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "sat", "russian": "сидел", "transcription_ipa": "sæt", "transcription_ru": "сэт"},
+      {"form_type": "past_participle", "english": "sat", "russian": "сидевший", "transcription_ipa": "sæt", "transcription_ru": "сэт"},
+      {"form_type": "present_participle", "english": "sitting", "russian": "сидя", "transcription_ipa": "ˈsɪt.ɪŋ", "transcription_ru": "ситинг"}
+    ]},
+    {"english": "stand", "russian": "стоять", "description": "Находиться в вертикальном положении", "transcription_ipa": "stænd", "transcription_ru": "стэнд", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "stood", "russian": "стоял", "transcription_ipa": "stʊд", "transcription_ru": "студ"},
+      {"form_type": "past_participle", "english": "stood", "russian": "стоявший", "transcription_ipa": "stʊд", "transcription_ru": "студ"},
+      {"form_type": "present_participle", "english": "standing", "russian": "стоя", "transcription_ipa": "ˈstænd.ɪŋ", "transcription_ru": "стэндинг"}
+    ]},
+    {"english": "lose", "russian": "терять", "description": "Лишаться чего-то", "transcription_ipa": "luːz", "transcription_ru": "луз", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "lost", "russian": "потерял", "transcription_ipa": "lɒst", "transcription_ru": "лост"},
+      {"form_type": "past_participle", "english": "lost", "russian": "потерянный", "transcription_ipa": "lɒst", "transcription_ru": "лост"},
+      {"form_type": "present_participle", "english": "losing", "russian": "теряя", "transcription_ipa": "ˈluː.zɪŋ", "transcription_ru": "лузинг"}
+    ]},
+    {"english": "pay", "russian": "платить", "description": "Отдавать деньги", "transcription_ipa": "peɪ", "transcription_ru": "пэй", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "paid", "russian": "заплатил", "transcription_ipa": "peɪд", "transcription_ru": "пэйд"},
+      {"form_type": "past_participle", "english": "paid", "russian": "оплаченный", "transcription_ipa": "peɪд", "transcription_ru": "пэйд"},
+      {"form_type": "present_participle", "english": "paying", "russian": "платя", "transcription_ipa": "ˈpeɪ.ɪŋ", "transcription_ru": "пэйинг"}
+    ]},
+    {"english": "meet", "russian": "встречать", "description": "Знакомиться, видеться", "transcription_ipa": "miːt", "transcription_ru": "мит", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "met", "russian": "встретил", "transcription_ipa": "met", "transcription_ru": "мэт"},
+      {"form_type": "past_participle", "english": "met", "russian": "встреченный", "transcription_ipa": "met", "transcription_ru": "мэт"},
+      {"form_type": "present_participle", "english": "meeting", "russian": "встречая", "transcription_ipa": "ˈmiː.tɪŋ", "transcription_ru": "митинг"}
+    ]},
+    {"english": "include", "russian": "включать", "description": "Содержать в себе", "transcription_ipa": "ɪnˈkluːд", "transcription_ru": "инклюд", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "included", "russian": "включил", "transcription_ipa": "ɪnˈkluː.дɪд", "transcription_ru": "инклюдид"},
+      {"form_type": "past_participle", "english": "included", "russian": "включённый", "transcription_ipa": "ɪnˈkluː.дɪд", "transcription_ru": "инклюдид"},
+      {"form_type": "present_participle", "english": "including", "russian": "включая", "transcription_ipa": "ɪnˈkluː.дɪŋ", "transcription_ru": "инклюдинг"}
+    ]},
+    {"english": "continue", "russian": "продолжать", "description": "Длиться дальше", "transcription_ipa": "kənˈtɪn.juː", "transcription_ru": "континью", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "continued", "russian": "продолжил", "transcription_ipa": "kənˈtɪn.juːд", "transcription_ru": "континьюд"},
+      {"form_type": "past_participle", "english": "continued", "russian": "продолженный", "transcription_ipa": "kənˈtɪn.juːд", "transcription_ru": "континьюд"},
+      {"form_type": "present_participle", "english": "continuing", "russian": "продолжая", "transcription_ipa": "kənˈtɪn.ju.ɪŋ", "transcription_ru": "континьюинг"}
+    ]},
+    {"english": "set", "russian": "устанавливать", "description": "Помещать, настраивать", "transcription_ipa": "set", "transcription_ru": "сэт", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "set", "russian": "установил", "transcription_ipa": "set", "transcription_ru": "сэт"},
+      {"form_type": "past_participle", "english": "set", "russian": "установленный", "transcription_ipa": "set", "transcription_ru": "сэт"},
+      {"form_type": "present_participle", "english": "setting", "russian": "устанавливая", "transcription_ipa": "ˈset.ɪŋ", "transcription_ru": "сэтинг"}
+    ]},
+    {"english": "learn", "russian": "учить", "description": "Получать знания", "transcription_ipa": "lɜːn", "transcription_ru": "лён", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "learned/learnt", "russian": "учил", "transcription_ipa": "lɜːнд/lɜːнт", "transcription_ru": "лёнд/лёнт"},
+      {"form_type": "past_participle", "english": "learned/learnt", "russian": "выученный", "transcription_ipa": "lɜːнд/lɜːнт", "transcription_ru": "лёнд/лёнт"},
+      {"form_type": "present_participle", "english": "learning", "russian": "уча", "transcription_ipa": "ˈlɜː.nɪŋ", "transcription_ru": "лёнинг"}
+    ]},
+    {"english": "change", "russian": "менять", "description": "Делать иным", "transcription_ipa": "tʃeɪndʒ", "transcription_ru": "чэйндж", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "changed", "russian": "поменял", "transcription_ipa": "tʃeɪndʒд", "transcription_ru": "чэйнджд"},
+      {"form_type": "past_participle", "english": "changed", "russian": "изменённый", "transcription_ipa": "tʃeɪndʒд", "transcription_ru": "чэйнджд"},
+      {"form_type": "present_participle", "english": "changing", "russian": "меняя", "transcription_ipa": "ˈtʃeɪn.dʒɪŋ", "transcription_ru": "чэйнджинг"}
+    ]},
+    {"english": "lead", "russian": "вести / лидировать", "description": "Быть впереди", "transcription_ipa": "liːд", "transcription_ru": "лид", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "led", "russian": "вёл", "transcription_ipa": "led", "transcription_ru": "лэд"},
+      {"form_type": "past_participle", "english": "led", "russian": "ведомый", "transcription_ipa": "led", "transcription_ru": "лэд"},
+      {"form_type": "present_participle", "english": "leading", "russian": "ведя", "transcription_ipa": "ˈliː.дɪŋ", "transcription_ru": "лидинг"}
+    ]},
+    {"english": "understand", "russian": "понимать", "description": "Осознавать смысл", "transcription_ipa": "ˌʌn.дəˈstænd", "transcription_ru": "андэстэнд", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "understood", "russian": "понял", "transcription_ipa": "ˌʌn.дəˈstʊд", "transcription_ru": "андэстуд"},
+      {"form_type": "past_participle", "english": "understood", "russian": "понятый", "transcription_ipa": "ˌʌn.дəˈstʊд", "transcription_ru": "андэстуд"},
+      {"form_type": "present_participle", "english": "understanding", "russian": "понимая", "transcription_ipa": "ˌʌn.дəˈstæn.дɪŋ", "transcription_ru": "андэстэндинг"}
+    ]},
+    {"english": "watch", "russian": "наблюдать", "description": "Смотреть за чем-то", "transcription_ipa": "wɒtʃ", "transcription_ru": "воч", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "watched", "russian": "наблюдал", "transcription_ipa": "wɒtʃт", "transcription_ru": "вочт"},
+      {"form_type": "past_participle", "english": "watched", "russian": "просмотренный", "transcription_ipa": "wɒtʃт", "transcription_ru": "вочт"},
+      {"form_type": "present_participle", "english": "watching", "russian": "наблюдая", "transcription_ipa": "ˈwɒtʃ.ɪŋ", "transcription_ru": "вочинг"}
+    ]},
+    {"english": "follow", "russian": "следовать", "description": "Идти за кем-то", "transcription_ipa": "ˈfɒl.əʊ", "transcription_ru": "фолоу", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "followed", "russian": "следовал", "transcription_ipa": "ˈfɒl.əʊд", "transcription_ru": "фолоуд"},
+      {"form_type": "past_participle", "english": "followed", "russian": "последовавший", "transcription_ipa": "ˈfɒl.əʊд", "transcription_ru": "фолоуд"},
+      {"form_type": "present_participle", "english": "following", "russian": "следуя", "transcription_ipa": "ˈfɒl.əʊ.ɪŋ", "transcription_ru": "фолоуинг"}
+    ]},
+    {"english": "stop", "russian": "останавливать", "description": "Прекращать движение", "transcription_ipa": "stɒp", "transcription_ru": "стоп", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "stopped", "russian": "остановил", "transcription_ipa": "stɒpt", "transcription_ru": "стопт"},
+      {"form_type": "past_participle", "english": "stopped", "russian": "остановленный", "transcription_ipa": "stɒpt", "transcription_ru": "стопт"},
+      {"form_type": "present_participle", "english": "stopping", "russian": "останавливая", "transcription_ipa": "ˈstɒp.ɪŋ", "transcription_ru": "стопинг"}
+    ]},
+    {"english": "begin", "russian": "начинать", "description": "Давать начало чему-то", "transcription_ipa": "bɪˈɡɪn", "transcription_ru": "бигин", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "began", "russian": "начал", "transcription_ipa": "bɪˈɡæn", "transcription_ru": "бигэн"},
+      {"form_type": "past_participle", "english": "begun", "russian": "начатый", "transcription_ipa": "bɪˈɡʌn", "transcription_ru": "биган"}
+    ]},
+    {"english": "finish", "russian": "заканчивать", "description": "Доводить до конца", "transcription_ipa": "ˈfɪn.ɪʃ", "transcription_ru": "финиш", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "become", "russian": "становиться", "description": "Переходить в новое состояние", "transcription_ipa": "bɪˈkʌm", "transcription_ru": "бикам", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "became", "russian": "стал", "transcription_ipa": "bɪˈkeɪm", "transcription_ru": "бикэйм"},
+      {"form_type": "past_participle", "english": "become", "russian": "ставший", "transcription_ipa": "bɪˈkʌm", "transcription_ru": "бикам"}
+    ]},
+    {"english": "seem", "russian": "казаться", "description": "Производить впечатление", "transcription_ipa": "siːm", "transcription_ru": "сим", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "leave", "russian": "покидать / оставлять", "description": "Уходить из места", "transcription_ipa": "liːv", "transcription_ru": "лив", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "left", "russian": "ушёл / оставил", "transcription_ipa": "left", "transcription_ru": "лэфт"},
+      {"form_type": "past_participle", "english": "left", "russian": "оставленный", "transcription_ipa": "left", "transcription_ru": "лэфт"}
+    ]},
+    {"english": "call", "russian": "звонить / называть", "description": "Связываться по телефону или давать имя", "transcription_ipa": "kɔːl", "transcription_ru": "кол", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "ask", "russian": "просить / спрашивать", "description": "Обращаться с просьбой или вопросом", "transcription_ipa": "ɑːsk", "transcription_ru": "аск", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "need", "russian": "нуждаться", "description": "Иметь потребность", "transcription_ipa": "niːd", "transcription_ru": "нид", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "feel", "russian": "чувствовать", "description": "Испытывать эмоции или физические ощущения", "transcription_ipa": "fiːl", "transcription_ru": "фил", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "felt", "russian": "чувствовал", "transcription_ipa": "felt", "transcription_ru": "фэлт"},
+      {"form_type": "past_participle", "english": "felt", "russian": "ощущённый", "transcription_ipa": "felt", "transcription_ru": "фэлт"}
+    ]},
+    {"english": "mean", "russian": "значить / иметь в виду", "description": "Означать что-то", "transcription_ipa": "miːn", "transcription_ru": "мин", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "meant", "russian": "значил", "transcription_ipa": "ment", "transcription_ru": "мэнт"},
+      {"form_type": "past_participle", "english": "meant", "russian": "значимый", "transcription_ipa": "ment", "transcription_ru": "мэнт"}
+    ]},
+    {"english": "keep", "russian": "хранить / продолжать", "description": "Сохранять состояние или вещь", "transcription_ipa": "kiːp", "transcription_ru": "кип", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "kept", "russian": "хранил", "transcription_ipa": "kept", "transcription_ru": "кэпт"},
+      {"form_type": "past_participle", "english": "kept", "russian": "сохранённый", "transcription_ipa": "kept", "transcription_ru": "кэпт"}
+    ]},
+    {"english": "let", "russian": "позволять", "description": "Давать разрешение", "transcription_ipa": "let", "transcription_ru": "лэт", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "let", "russian": "позволил", "transcription_ipa": "let", "transcription_ru": "лэт"},
+      {"form_type": "past_participle", "english": "let", "russian": "допущенный", "transcription_ipa": "let", "transcription_ru": "лэт"}
+    ]},
+    {"english": "put", "russian": "класть / ставить", "description": "Помещать предмет куда-то", "transcription_ipa": "pʊt", "transcription_ru": "пут", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "put", "russian": "положил", "transcription_ipa": "pʊt", "transcription_ru": "пут"},
+      {"form_type": "past_participle", "english": "put", "russian": "положенный", "transcription_ipa": "pʊt", "transcription_ru": "пут"}
+    ]},
+    {"english": "hold", "russian": "держать", "description": "Удерживать в руках или сохранять", "transcription_ipa": "həʊld", "transcription_ru": "хоулд", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "held", "russian": "держал", "transcription_ipa": "held", "transcription_ru": "хэлд"},
+      {"form_type": "past_participle", "english": "held", "russian": "удержанный", "transcription_ipa": "held", "transcription_ru": "хэлд"}
+    ]},
+    {"english": "buy", "russian": "покупать", "description": "Приобретать за деньги", "transcription_ipa": "baɪ", "transcription_ru": "бай", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "bought", "russian": "купил", "transcription_ipa": "bɔːt", "transcription_ru": "бот"},
+      {"form_type": "past_participle", "english": "bought", "russian": "купленный", "transcription_ipa": "bɔːt", "transcription_ru": "бот"}
+    ]},
+    {"english": "sell", "russian": "продавать", "description": "Обменивать товар на деньги", "transcription_ipa": "sel", "transcription_ru": "сэл", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "sold", "russian": "продал", "transcription_ipa": "səʊld", "transcription_ru": "соулд"},
+      {"form_type": "past_participle", "english": "sold", "russian": "проданный", "transcription_ipa": "səʊld", "transcription_ru": "соулд"}
+    ]},
+    {"english": "read", "russian": "читать", "description": "Воспринимать написанный текст", "transcription_ipa": "riːd", "transcription_ru": "рид", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "read", "russian": "читал", "transcription_ipa": "red", "transcription_ru": "рэд"},
+      {"form_type": "past_participle", "english": "read", "russian": "прочитанный", "transcription_ipa": "red", "transcription_ru": "рэд"}
+    ]},
+    {"english": "speak", "russian": "говорить / разговаривать", "description": "Владеть речью или языком", "transcription_ipa": "spiːk", "transcription_ru": "спик", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "spoke", "russian": "говорил", "transcription_ipa": "spəʊk", "transcription_ru": "споук"},
+      {"form_type": "past_participle", "english": "spoken", "russian": "сказанный", "transcription_ipa": "ˈspəʊ.kən", "transcription_ru": "споукэн"}
+    ]},
+    {"english": "listen", "russian": "слушать", "description": "Воспринимать звуки", "transcription_ipa": "ˈlɪs.ən", "transcription_ru": "лисн", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "eat", "russian": "есть / кушать", "description": "Принимать пищу", "transcription_ipa": "iːt", "transcription_ru": "ит", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "ate", "russian": "ел", "transcription_ipa": "eɪt", "transcription_ru": "эйт"},
+      {"form_type": "past_participle", "english": "eaten", "russian": "съеденный", "transcription_ipa": "ˈiː.tən", "transcription_ru": "итн"}
+    ]},
+    {"english": "drink", "russian": "пить", "description": "Употреблять жидкость", "transcription_ipa": "drɪŋk", "transcription_ru": "дринк", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "drank", "russian": "пил", "transcription_ipa": "dræŋk", "transcription_ru": "дрэнк"},
+      {"form_type": "past_participle", "english": "drunk", "russian": "выпитый", "transcription_ipa": "drʌŋk", "transcription_ru": "дранк"}
+    ]},
+    {"english": "sleep", "russian": "спать", "description": "Находиться в состоянии сна", "transcription_ipa": "sliːp", "transcription_ru": "слип", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "slept", "russian": "спал", "transcription_ipa": "slept", "transcription_ru": "слэпт"},
+      {"form_type": "past_participle", "english": "slept", "russian": "выспавшийся", "transcription_ipa": "slept", "transcription_ru": "слэпт"}
+    ]},
+    {"english": "wake up", "russian": "просыпаться", "description": "Переставать спать", "transcription_ipa": "weɪk ʌp", "transcription_ru": "вэйк ап", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "woke up", "russian": "проснулся", "transcription_ipa": "wəʊk ʌp", "transcription_ru": "воук ап"},
+      {"form_type": "past_participle", "english": "woken up", "russian": "проснувшийся", "transcription_ipa": "ˈwəʊ.kən ʌp", "transcription_ru": "воукэн ап"}
+    ]},
+    {"english": "wait", "russian": "ждать", "description": "Ожидать чего-то", "transcription_ipa": "weɪt", "transcription_ru": "вэйт", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "hope", "russian": "надеяться", "description": "Желать чего-то хорошего", "transcription_ipa": "həʊp", "transcription_ru": "хоуп", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "love", "russian": "любить", "description": "Испытывать сильную привязанность", "transcription_ipa": "lʌv", "transcription_ru": "лав", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "hate", "russian": "ненавидеть", "description": "Испытывать сильную неприязнь", "transcription_ipa": "heɪt", "transcription_ru": "хэйт", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "fear", "russian": "бояться", "description": "Испытывать страх", "transcription_ipa": "fɪər", "transcription_ru": "фиэ", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "forget", "russian": "забывать", "description": "Переставать помнить", "transcription_ipa": "fəˈɡet", "transcription_ru": "фэгэт", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "forgot", "russian": "забыл", "transcription_ipa": "fəˈɡɒt", "transcription_ru": "фэгот"},
+      {"form_type": "past_participle", "english": "forgotten", "russian": "забытый", "transcription_ipa": "fəˈɡɒt.ən", "transcription_ru": "фэготн"}
+    ]},
+    {"english": "remember", "russian": "помнить", "description": "Сохранять в памяти", "transcription_ipa": "rɪˈmem.bər", "transcription_ru": "римэмбэ", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "laugh", "russian": "смеяться", "description": "Выражать радость звуками", "transcription_ipa": "lɑːf", "transcription_ru": "лаф", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "cry", "russian": "плакать", "description": "Проливать слезы", "transcription_ipa": "kraɪ", "transcription_ru": "край", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "smile", "russian": "улыбаться", "description": "Выражать радость мимикой", "transcription_ipa": "smaɪl", "transcription_ru": "смайл", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "win", "russian": "побеждать", "description": "Одерживать победу", "transcription_ipa": "wɪn", "transcription_ru": "вин", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "won", "russian": "победил", "transcription_ipa": "wʌn", "transcription_ru": "ван"},
+      {"form_type": "past_participle", "english": "won", "russian": "победивший", "transcription_ipa": "wʌn", "transcription_ru": "ван"}
+    ]},
+    {"english": "lose", "russian": "проигрывать", "description": "Потерпеть неудачу", "transcription_ipa": "luːz", "transcription_ru": "луз", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "lost", "russian": "проиграл", "transcription_ipa": "lɒst", "transcription_ru": "лост"},
+      {"form_type": "past_participle", "english": "lost", "russian": "проигравший", "transcription_ipa": "lɒst", "transcription_ru": "лост"}
+    ]},
+    {"english": "open", "russian": "открывать", "description": "Делать открытым", "transcription_ipa": "ˈəʊ.pən", "transcription_ru": "оупэн", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "close", "russian": "закрывать", "description": "Делать закрытым", "transcription_ipa": "kləʊz", "transcription_ru": "клоуз", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "send", "russian": "отправлять", "description": "Посылать что-то", "transcription_ipa": "send", "transcription_ru": "сэнд", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "sent", "russian": "отправил", "transcription_ipa": "sent", "transcription_ru": "сэнт"},
+      {"form_type": "past_participle", "english": "sent", "russian": "отправленный", "transcription_ipa": "sent", "transcription_ru": "сэнт"}
+    ]},
+    {"english": "receive", "russian": "получать", "description": "Принимать что-то отправленное", "transcription_ipa": "rɪˈsiːv", "transcription_ru": "рисив", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "build", "russian": "строить", "description": "Создавать сооружение", "transcription_ipa": "bɪld", "transcription_ru": "билд", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "built", "russian": "построил", "transcription_ipa": "bɪlt", "transcription_ru": "билт"},
+      {"form_type": "past_participle", "english": "built", "russian": "построенный", "transcription_ipa": "bɪlt", "transcription_ru": "билт"}
+    ]},
+    {"english": "destroy", "russian": "разрушать", "description": "Ломать что-то полностью", "transcription_ipa": "dɪˈstrɔɪ", "transcription_ru": "дистрой", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "save", "russian": "спасать / сохранять", "description": "Выручать из беды или беречь", "transcription_ipa": "seɪv", "transcription_ru": "сэйв", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "spend", "russian": "тратить", "description": "Расходовать ресурсы", "transcription_ipa": "spend", "transcription_ru": "спэнд", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "spent", "russian": "потратил", "transcription_ipa": "spent", "transcription_ru": "спэнт"},
+      {"form_type": "past_participle", "english": "spent", "russian": "потраченный", "transcription_ipa": "spent", "transcription_ru": "спэнт"}
+    ]},
+    {"english": "cost", "russian": "стоить", "description": "Иметь цену", "transcription_ipa": "kɒst", "transcription_ru": "кост", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "cost", "russian": "стоил", "transcription_ipa": "kɒst", "transcription_ru": "кост"},
+      {"form_type": "past_participle", "english": "cost", "russian": "стоивший", "transcription_ipa": "kɒst", "transcription_ru": "кост"}
+    ]},
+    {"english": "choose", "russian": "выбирать", "description": "Делать выбор", "transcription_ipa": "tʃuːz", "transcription_ru": "чуз", "difficulty": "easy", "part_of_speech": "verb", "forms": [
+      {"form_type": "past_simple", "english": "chose", "russian": "выбрал", "transcription_ipa": "tʃəʊz", "transcription_ru": "чоуз"},
+      {"form_type": "past_participle", "english": "chosen", "russian": "выбранный", "transcription_ipa": "ˈtʃəʊ.zən", "transcription_ru": "чоузн"}
+    ]},
+    {"english": "decide", "russian": "решать", "description": "Принимать решение", "transcription_ipa": "dɪˈsaɪd", "transcription_ru": "дисайд", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "explain", "russian": "объяснять", "description": "Делать понятным", "transcription_ipa": "ɪkˈspleɪn", "transcription_ru": "иксплэйн", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "describe", "russian": "описывать", "description": "Давать описание", "transcription_ipa": "dɪˈskraɪb", "transcription_ru": "дискрайб", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "offer", "russian": "предлагать", "description": "Выдвигать предложение", "transcription_ipa": "ˈɒf.ər", "transcription_ru": "офэ", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "agree", "russian": "соглашаться", "description": "Быть согласным", "transcription_ipa": "əˈɡriː", "transcription_ru": "эгри", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "disagree", "russian": "не соглашаться", "description": "Быть несогласным", "transcription_ipa": "ˌdɪs.əˈɡriː", "transcription_ru": "дисэгри", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "allow", "russian": "разрешать", "description": "Давать позволение", "transcription_ipa": "əˈlaʊ", "transcription_ru": "элау", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "prevent", "russian": "предотвращать", "description": "Мешать чему-то случиться", "transcription_ipa": "prɪˈvent", "transcription_ru": "привэнт", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "promise", "russian": "обещать", "description": "Давать обещание", "transcription_ipa": "ˈprɒm.ɪs", "transcription_ru": "промис", "difficulty": "easy", "part_of_speech": "verb", "forms": []},
+    {"english": "suggest", "russian": "предлагать / советовать", "description": "Высказывать идею", "transcription_ipa": "səˈdʒest", "transcription_ru": "сэджест", "difficulty": "easy", "part_of_speech": "verb", "forms": []}
+  ]
+}
